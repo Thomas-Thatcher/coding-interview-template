@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CodeInterview.Business/CodeInterview.Business.csproj" Id="04ce6f92-9374-4575-bb49-0c57b5269638" />
+    <Project Path="src/CodeInterview.CLI/CodeInterview.CLI.csproj" />
+    <Project Path="src/CodeInterview.WebApi/CodeInterview.WebApi.csproj" Id="40990d03-77a3-4acf-a381-a1651b553a66" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CodeInterview.Tests/CodeInterview.Tests.csproj" Id="8133a99a-8bbc-49bd-9533-25f936f29f0a" />
+  </Folder>
+</Solution>

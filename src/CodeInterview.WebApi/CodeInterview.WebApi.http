@@ -1,0 +1,6 @@
+@CodeInterview.WebApi_HostAddress = http://localhost:5128
+
+GET {{CodeInterview.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
