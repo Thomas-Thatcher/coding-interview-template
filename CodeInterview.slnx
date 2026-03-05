@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/CodeInterview.Business/CodeInterview.Business.csproj" Id="04ce6f92-9374-4575-bb49-0c57b5269638" />
     <Project Path="src/CodeInterview.CLI/CodeInterview.CLI.csproj" />
