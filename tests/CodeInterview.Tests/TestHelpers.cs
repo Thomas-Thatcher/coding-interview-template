@@ -54,5 +54,26 @@ namespace CodeInterview.Tests
 
             CollectionAssert.AreEqual(expectedNormalized, actualNormalized);
         }
+
+        /// <summary>
+        /// Asserts that two collections of string sets are equal, regardless of the order of elements within each set
+        /// or the order of the sets themselves.
+        /// </summary>
+        /// <remarks>This assertion treats each inner collection as a set, ignoring the order of elements
+        /// within sets and the order of sets in the outer collection. The assertion fails if the sets or their contents
+        /// do not match exactly.</remarks>
+        /// <param name="expected">The collection of expected string sets to compare against. Each inner collection represents a set whose
+        /// elements are expected to match those in the corresponding set of the actual collection.</param>
+        /// <param name="actual">The collection of actual string sets to compare. Each inner collection represents a set whose elements are
+        /// compared to those in the expected collection.</param>
+        public static void AssertNestedSetEqual(IEnumerable<IEnumerable<string>> expected, IEnumerable<IEnumerable<string>> actual, string seperatorString = "<<<Sep>>>")
+        {
+            string Normalize(IEnumerable<string> item) => string.Join(seperatorString, item.OrderBy(x => x));
+
+            var expectedNormalized = expected.Select(Normalize).OrderBy(x => x).ToArray();
+            var actualNormalized = actual.Select(Normalize).OrderBy(x => x).ToArray();
+
+            CollectionAssert.AreEqual(expectedNormalized, actualNormalized);
+        }
     }
 }
